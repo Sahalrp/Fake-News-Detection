@@ -1,0 +1,44 @@
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#5BC0BE"
+backgroundColor = "#F5F5F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1C2541"
+font = "sans serif"
+
+[ui]
+hideTopBar = false
+customCss = ".streamlit/custom.css"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+port = 8503
+headless = true
+# Note: enableCORS=false is not compatible with enableXsrfProtection=true
+# As a result, enableCORS is being overridden to true
+enableCORS = true
+enableXsrfProtection = true
+
+[runner]
+magicEnabled = true
+# Note: installTracer and fixMatplotlib options are no longer supported in newer Streamlit versions
+
+[mapbox]
+token = ""
+
+# Note: deprecation section is no longer supported in newer Streamlit versions
+
+[global]
+developmentMode = false
+# Note: logLevel option is no longer supported in newer Streamlit versions
+
+[logger]
+level = "info"
+messageFormat = "%(asctime)s %(message)s"
+
+# Note: The pages.displayName option is no longer supported in newer Streamlit versions
+# We're using CSS and JavaScript in app.py to rename "app" to "Home" instead

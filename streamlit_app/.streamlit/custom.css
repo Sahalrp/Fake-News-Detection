@@ -1,0 +1,39 @@
+/* Custom CSS for Fake News Detection App */
+
+/* Hide Model Explanation and Prediction from sidebar - comprehensive approach */
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:nth-child(3),
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:nth-child(4),
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a[href*="Model_Explanation"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a[href*="Prediction"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:has(a[href*="Model_Explanation"]),
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:has(a[href*="Prediction"]),
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a[href*="2_Model_Explanation"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a[href*="3_Prediction"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:has(a[href*="2_Model_Explanation"]),
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:has(a[href*="3_Prediction"]) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* Simple approach to rename "app" to "Home" in the sidebar */
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:first-child a p {
+    visibility: hidden;
+    position: relative;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] li:first-child a p:after {
+    content: 'Home';
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
